@@ -133,13 +133,12 @@ ul {
   margin-left: auto;
 }
 
-.mail-tel-nav .item + .item {
+/* .mail-tel-nav .item + .item {
   margin-left: 50px;
-}
-/* .mail-tel-nav .item:not(:last-child) {
-  margin-right: 50px;
 } */
-/* тоже не работает  */
+.mail-tel-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 
 .header-tel-link {
   font-size: 14px;
@@ -155,18 +154,26 @@ ul {
   color: var(--primary-text-color);
 }
 
-/* Hero style */
+/* Hero style  -----------------------------*/
 .hero {
   /* padding: 200px 452px 280px 452px; */
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
   text-align: center;
-  background-color: var(--background-color-fon);
+  /* background-color: var(--background-color-fon); */
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/hero-fon.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
   /* margin-top: 0; */
-  margin-bottom: 30px;
+  width: 696px;
+  margin: 0 auto 30px;
+  /* равнение маржином c нижним маржином как подсказала ментор */
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -174,7 +181,7 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--hero-color);
-  display: inline-block;
+  display: block;
 }
 
 .hero-button {
@@ -185,10 +192,8 @@ ul {
   color: var(--hero-color);
   background-color: var(--background-color-button);
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
   padding: 10px 32px;
-  min-width: 216px;
-  margin-bottom: 200px;
 
   /* Width 216px Height 50px  СЂР°Р·РјРµСЂ РєРЅРѕРїРєРё РІ РјР°РєРµС‚Рµ*/
 }
@@ -334,7 +339,7 @@ ul {
 }
 
 /* footer styles */
-.footer-nav {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-color-fon);
@@ -356,15 +361,14 @@ ul {
   color: var(--footer-logo-last-color);
 }
 
-address {
-  margin-top: 20px;
-}
 .adress-list {
   display: block;
-  /* margin-top: 20px; */
+  margin-top: 20px;
+}
+.address-line:not(:last-child) {
+  margin-bottom: 9px;
 }
 .footer-list-adress {
-  margin-bottom: 5px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -373,7 +377,6 @@ address {
   color: var(--footer-color-list-adress);
 }
 .footer-list-mail {
-  margin-bottom: 5px;
   display: flex;
   font-style: normal;
   font-weight: 400;
@@ -409,7 +412,6 @@ address {
   justify-content: center;
 }
 .portfolio-filtr-link {
-  margin-right: 8px;
   padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
@@ -422,6 +424,9 @@ address {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+}
+.portfolio-menu:not(:last-child) {
+  margin-right: 8px;
 }
 .active-filtr {
   color: var(--button-filtr-font-active);
@@ -444,6 +449,9 @@ address {
 }
 .portfolio-container-item:nth-child(3n) {
   margin-right: 0;
+}
+.portfolio-img {
+  display: block;
 }
 .portfolio-sign {
   padding: 20px 24px;
