@@ -378,7 +378,6 @@ ul {
   color: var(--footer-color-list-adress);
 }
 .footer-list-mail {
-  display: flex;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -447,6 +446,7 @@ ul {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 /* 0px 4px 4px rgba(0, 0, 0, 0.06)   для чего это не понял*/
@@ -454,13 +454,21 @@ ul {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-container-item:nth-child(3n) {
   margin-right: 0;
 }
+.portfolio-container-item:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
 .portfolio-img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .portfolio-sign {
   padding: 20px 24px;
