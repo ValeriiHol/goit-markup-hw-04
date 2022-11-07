@@ -24,6 +24,7 @@
   --social-icon: #afb1b8;
   --features-icon-fon: #f5f4fa;
   --clients-border: #afb1b8;
+  --foot-line: rgba(255, 255, 255, 0.1);
 }
 .body {
   font-family: 'Roboto', sans-serif;
@@ -469,6 +470,10 @@ ul {
   background-color: var(--background-color-fon);
 }
 
+.footer-content {
+  display: flex;
+  /* justify-content: space-between; */
+}
 .footer-logo {
   display: block;
   /* margin-bottom: 20px; */
@@ -484,7 +489,6 @@ ul {
 .footer-logo-last {
   color: var(--footer-logo-last-color);
 }
-
 .adress-list {
   display: block;
   margin-top: 20px;
@@ -523,6 +527,52 @@ ul {
 .footer-list-tel:hover,
 .footer-list-tel:active {
   color: var(--accent-color);
+}
+.foot-social-net {
+  display: block;
+  margin-left: 70px;
+}
+.join-title {
+  color: var(--footer-color-list-adress);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.foot-social-net .social-icons {
+  display: flex;
+  justify-content: center;
+}
+.foot-social-net .social-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+.foot-social-net .social-item:last-child {
+  margin-right: 0;
+}
+.foot-social-net .social-link {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--foot-line);
+  border-radius: 50%;
+}
+
+.foot-social-net .social-link:hover {
+  background-color: var(--social-fon-active);
+}
+
+.join .social-icon {
+  fill: var(--hero-color);
+}
+.join .social-link:hover .social-icon {
+  fill: var(--hero-color);
+  /* (СУПЕР способ Карины) */
 }
 
 /* portfolio */
