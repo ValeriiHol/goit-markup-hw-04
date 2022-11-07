@@ -23,6 +23,7 @@
   --social-fon-active: #2196f3;
   --social-icon: #afb1b8;
   --features-icon-fon: #f5f4fa;
+  --clients-border: #afb1b8;
 }
 .body {
   font-family: 'Roboto', sans-serif;
@@ -408,6 +409,57 @@ ul {
 .team-cards-item .social-link:hover .social-icon {
   fill: var(--hero-color);
   /* (СУПЕР способ Карины) */
+}
+
+.clients {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* padding-left: 215px;
+  padding-right: 215px; */
+  /* background-color: orange; */
+}
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
+.clients-content {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-item {
+  border: 1px solid var(--clients-border);
+  margin-right: 30px;
+}
+.clients-item:last-child {
+  margin-right: 0px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 90px;
+  color: var(--clients-border);
+}
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover {
+  color: var(--accent-color);
+}
+/* А здесь без фокуса Карины сработало  */
+.clients-icon-logo {
+  fill: currentColor;
+  height: 50px;
 }
 
 /* footer styles */
