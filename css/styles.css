@@ -22,6 +22,7 @@
   --cards-border: #eeeeee;
   --social-fon-active: #2196f3;
   --social-icon: #afb1b8;
+  --features-icon-fon: #f5f4fa;
 }
 .body {
   font-family: 'Roboto', sans-serif;
@@ -239,16 +240,17 @@ ul {
   text-transform: uppercase;
   color: var(--title-text-color);
 }
-.div-icon {
+.features-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 270px;
   height: 120px;
-  background-color: grey;
+  background-color: var(--features-icon-fon);
   border-radius: 4px;
+  margin-bottom: 30px;
 }
-.svg-sputnik {
+.features-icon-size {
   width: 70px;
   height: 70px;
 }
