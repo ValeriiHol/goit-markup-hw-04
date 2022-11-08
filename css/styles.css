@@ -146,6 +146,9 @@ ul {
 }
 
 .header-tel-link {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -153,6 +156,10 @@ ul {
 }
 
 .header-mail-link {
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  /* justify-content: center; */
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -171,13 +178,13 @@ ul {
 
 .svg-tel {
   fill: currentColor;
-  width: 16px;
-  height: 11px;
   margin-right: 10px;
 }
 
 /* Hero style  -----------------------------*/
 .hero {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -345,7 +352,8 @@ ul {
   width: 270px;
   margin-right: 30px;
   background-color: var(--button-filtr-font-active);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-cards-item:nth-child(4n) {
   margin-right: 0;
@@ -417,9 +425,6 @@ ul {
   margin-bottom: 0;
   padding-top: 94px;
   padding-bottom: 94px;
-  /* padding-left: 215px;
-  padding-right: 215px; */
-  /* background-color: orange; */
 }
 .clients-title {
   margin-top: 0;
@@ -432,35 +437,33 @@ ul {
 }
 .clients-content {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .clients-item {
-  border: 1px solid var(--clients-border);
-  margin-right: 30px;
+  flex-basis: calc((100% - 5 * 30px) / 6);
 }
-.clients-item:last-child {
+
+/* .clients-item:last-child {
   margin-right: 0px;
-}
+}    чекаю на формулу від пані Наталі */
 
 .clients-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 175px;
-  height: 90px;
+  border: 1px solid var(--clients-border);
+  border-radius: 4px;
+  height: 92px;
   color: var(--clients-border);
 }
-.clients-item:hover,
-.clients-item:focus {
-  border: 1px solid var(--accent-color);
-}
+
 .clients-link:hover {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 /* А здесь без фокуса Карины сработало  */
 .clients-icon-logo {
   fill: currentColor;
-  height: 50px;
 }
 
 /* footer styles */
@@ -472,12 +475,9 @@ ul {
 
 .footer-content {
   display: flex;
-  /* justify-content: space-between; */
+  align-items: baseline;
 }
 .footer-logo {
-  display: block;
-  /* margin-bottom: 20px; */
-  /* margin-top: 60px; */
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -567,10 +567,10 @@ ul {
   background-color: var(--social-fon-active);
 }
 
-.join .social-icon {
+.foot-social-net .social-icon {
   fill: var(--hero-color);
 }
-.join .social-link:hover .social-icon {
+.foot-social-net .social-link:hover .social-icon {
   fill: var(--hero-color);
   /* (СУПЕР способ Карины) */
 }
@@ -620,15 +620,6 @@ ul {
   margin-right: 30px;
   margin-bottom: 30px;
   flex-basis: calc((100% - 60px) / 3);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
-}
-/* 0px 4px 4px rgba(0, 0, 0, 0.06)   для чего это не понял*/
-.portfolio-container-item:hover {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc((100% - 60px) / 3);
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-container-item:nth-child(3n) {
   margin-right: 0;
@@ -637,7 +628,13 @@ ul {
   margin-right: 0;
   margin-bottom: 0;
 }
-
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .portfolio-img {
   display: block;
   width: 100%;
@@ -645,16 +642,9 @@ ul {
 }
 .portfolio-sign {
   padding: 20px 24px;
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--cards-border);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--cards-border);
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: var(--cards-border);
-  /* border: 1px solid var(--cards-border); */
+  border-right: 1px solid var(--cards-border);
+  border-bottom: 1px solid var(--cards-border);
+  border-left: 1px solid var(--cards-border);
 }
 .portfolio-project {
   font-weight: 700;
